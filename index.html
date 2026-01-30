@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Habit Tracker</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="top-bar">
+    <h1>Habit Tracker</h1>
+    <span class="top-stat" onclick="openProgress()">📊</span>
+</div>
+
+<div class="month-label" id="monthLabel"></div>
+
+<div class="table-wrapper">
+<table id="trackerTable">
+    <thead id="tableHead"></thead>
+    <tbody id="tableBody"></tbody>
+</table>
+</div>
+
+<div class="controls">
+    <input id="habitName" placeholder="Habit name">
+    <button onclick="addHabit()">Add Habit</button>
+    <button onclick="addWeek()">Add Week</button>
+</div>
+
+<div id="progressModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeProgress()">×</span>
+        <h3>Overrall Progress</h3>
+        <div id="progressBars"></div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
